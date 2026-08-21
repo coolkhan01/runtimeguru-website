@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://runtimegurus.com";
+  const baseUrl = "https://www.runtimeguru.com";
   const pages = ["/", "/services", "/about", "/portfolio", "/pricing", "/contact", "/privacy", "/terms"];
 
   return pages.map((path) => ({

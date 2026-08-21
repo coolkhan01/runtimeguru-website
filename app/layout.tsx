@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://runtimegurus.com"),
+  metadataBase: new URL("https://www.runtimeguru.com"),
   title: {
     default: "Runtime Gurus — YouTube Automation Agency | Done For You Channel Growth",
     template: "%s | Runtime Gurus",
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     "passive income YouTube",
     "Runtime Gurus",
   ],
-  authors: [{ name: "Runtime Gurus", url: "https://runtimegurus.com" }],
+  authors: [{ name: "Runtime Gurus", url: "https://www.runtimeguru.com" }],
   creator: "Runtime Gurus",
   publisher: "Runtime Gurus",
   formatDetection: { email: false, address: false, telephone: false },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://runtimegurus.com",
+    url: "https://www.runtimeguru.com",
     siteName: "Runtime Gurus",
     title: "Runtime Gurus — YouTube Automation Agency | Done For You Channel Growth",
     description:
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     google: "",
   },
   alternates: {
-    canonical: "https://runtimegurus.com",
+    canonical: "https://www.runtimeguru.com",
   },
 };
 
@@ -79,12 +79,12 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://runtimegurus.com/#organization",
+      "@id": "https://www.runtimeguru.com/#organization",
       name: "Runtime Gurus",
-      url: "https://runtimegurus.com",
+      url: "https://www.runtimeguru.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://runtimegurus.com/logo.png",
+        url: "https://www.runtimeguru.com/logo.png",
         width: 512,
         height: 512,
       },
@@ -111,10 +111,10 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://runtimegurus.com/#website",
-      url: "https://runtimegurus.com",
+      "@id": "https://www.runtimeguru.com/#website",
+      url: "https://www.runtimeguru.com",
       name: "Runtime Gurus",
-      publisher: { "@id": "https://runtimegurus.com/#organization" },
+      publisher: { "@id": "https://www.runtimeguru.com/#organization" },
     },
   ],
 };
