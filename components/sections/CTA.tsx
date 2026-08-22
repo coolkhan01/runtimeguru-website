@@ -39,11 +39,11 @@ export default function CTA() {
         </div>
 
         {/* Trust strip */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-[#64748B]">
-          <span>✓ No monthly commitment on Trial Pack</span>
-          <span>✓ 90-day money-back guarantee</span>
-          <span>✓ Dedicated account manager</span>
-        </div>
+        <ul className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-[#64748B] list-none">
+          <li>✓ No monthly commitment on Trial Pack</li>
+          <li>✓ 90-day money-back guarantee</li>
+          <li>✓ Dedicated account manager</li>
+        </ul>
       </div>
     </section>
   );

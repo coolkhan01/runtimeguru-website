@@ -1,9 +1,9 @@
 const videoProofLinks = [
-  'https://youtu.be/xF0EOAfciao',
-  'https://youtu.be/WnmGxazwK1w',
-  'https://youtu.be/A3qqOae4xLE',
-  'https://youtu.be/zf0JgHDkd14',
-  'https://youtu.be/RkKDcCY59cw',
+  { url: 'https://youtu.be/xF0EOAfciao', title: 'Runtime Gurus client results — channel growth proof 1' },
+  { url: 'https://youtu.be/WnmGxazwK1w', title: 'Runtime Gurus client results — channel growth proof 2' },
+  { url: 'https://youtu.be/A3qqOae4xLE', title: 'Runtime Gurus client results — channel growth proof 3' },
+  { url: 'https://youtu.be/zf0JgHDkd14', title: 'Runtime Gurus client results — channel growth proof 4' },
+  { url: 'https://youtu.be/RkKDcCY59cw', title: 'Runtime Gurus client results — channel growth proof 5' },
 ];
 
 function toEmbedUrl(url: string): string {
@@ -39,7 +39,7 @@ export default function VideoProofs() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {videoProofLinks.map((url) => (
+          {videoProofLinks.map(({ url, title }) => (
             <div
               key={url}
               className="rounded-2xl overflow-hidden bg-[#0B1230] border border-[#1A2548] hover:border-[var(--primary)]/40 transition-all duration-300 hover:shadow-lg hover:shadow-[var(--primary-glow)]"
@@ -47,11 +47,11 @@ export default function VideoProofs() {
               <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
                 <iframe
                   src={toEmbedUrl(url)}
+                  title={title}
                   className="absolute inset-0 w-full h-full"
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   loading="lazy"
-                  title="Video proof"
                 />
               </div>
             </div>

@@ -23,6 +23,7 @@ function VideoModal({ onClose }: { onClose: () => void }) {
         </button>
         <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-2xl">
           <iframe src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&rel=0`}
+            title="Runtime Gurus — YouTube automation agency showcase video"
             className="w-full h-full" allow="autoplay; encrypted-media; fullscreen" allowFullScreen />
         </div>
       </div>
@@ -103,11 +104,11 @@ export default function Hero() {
                 Choose Your Plan
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <a href="/#portfolio"
+              <Link href="/#portfolio"
                 className="flex items-center gap-2.5 px-9 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-bold text-lg hover:bg-white/10 hover:border-blue-700/50 transition-all duration-200 backdrop-blur-sm">
                 <Play className="w-5 h-5 text-blue-400 fill-blue-400" />
                 See Our Results
-              </a>
+              </Link>
             </div>
           </div>
 

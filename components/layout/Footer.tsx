@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
-import { InstagramIcon, LinkedInIcon, TwitterXIcon, DiscordIcon, WhatsAppIcon } from "@/components/ui/SocialIcons";
+import { MapPin, Phone } from "lucide-react";
+import { InstagramIcon, TwitterXIcon, DiscordIcon, WhatsAppIcon } from "@/components/ui/SocialIcons";
 
 const services = [
   { label: "YouTube Automation", href: "/services#automation" },
@@ -18,11 +18,10 @@ const company = [
 ];
 
 const social = [
-  { Icon: InstagramIcon, href: "https://www.instagram.com/runtimegurus/",              label: "Instagram" },
-  { Icon: LinkedInIcon,  href: "https://linkedin.com/in/youtubeautomation",             label: "LinkedIn" },
-  { Icon: TwitterXIcon,  href: "https://twitter.com/Shehrozfaiq7",                     label: "Twitter / X" },
-  { Icon: DiscordIcon,   href: "https://discord.gg/KFVH2pGsBC",                        label: "Discord" },
-  { Icon: WhatsAppIcon,  href: "https://wa.me/923368856575",                            label: "WhatsApp" },
+  { Icon: InstagramIcon, href: "https://www.instagram.com/runtimegurus/", label: "Instagram" },
+  { Icon: TwitterXIcon,  href: "https://twitter.com/Shehrozfaiq7",        label: "Twitter / X" },
+  { Icon: DiscordIcon,   href: "https://discord.gg/KFVH2pGsBC",           label: "Discord" },
+  { Icon: WhatsAppIcon,  href: "https://wa.me/923368856575",               label: "WhatsApp" },
 ];
 
 export default function Footer() {
@@ -44,7 +43,7 @@ export default function Footer() {
             <p className="text-[#64748B] text-sm leading-relaxed mb-6">
               We handle scripts, voiceover, editing, thumbnails, and full channel management so you build passive income without touching a single video.
             </p>
-            <div className="space-y-2">
+            <address className="not-italic space-y-2">
               <a href="https://wa.me/923368856575" target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-[#64748B] hover:text-blue-400 transition-colors">
                 <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />
@@ -54,7 +53,7 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-blue-400 flex-shrink-0" />
                 Rawalpindi, Pakistan
               </div>
-            </div>
+            </address>
           </div>
 
           {/* Services */}
