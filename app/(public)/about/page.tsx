@@ -4,9 +4,38 @@ import { Target, Globe2, Heart, ArrowRight, CheckCircle2, Zap } from "lucide-rea
 import CTA from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Runtime Gurus — YouTube Automation Agency Team",
   description:
-    "Learn about Runtime Gurus â€” our mission, team, and the values that drive us to deliver world-class YouTube automation and digital services.",
+    "Learn about Runtime Gurus — our mission, team, and the values that drive us to deliver world-class YouTube automation and digital services.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    url: "/about",
+    title: "About Runtime Gurus — YouTube Automation Agency Team",
+    description: "Learn about Runtime Gurus — our mission, 25+ team specialists, and the values driving world-class YouTube automation for 200+ creators worldwide.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Runtime Gurus — YouTube Automation Agency" }],
+  },
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.runtimeguru.com/about#webpage",
+      url: "https://www.runtimeguru.com/about",
+      name: "About Runtime Gurus — YouTube Automation Agency Team",
+      isPartOf: { "@id": "https://www.runtimeguru.com/#website" },
+      about: { "@id": "https://www.runtimeguru.com/#organization" },
+      description: "Learn about Runtime Gurus — our mission, team, and the values that drive us to deliver world-class YouTube automation and digital services.",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.runtimeguru.com" },
+        { "@type": "ListItem", position: 2, name: "About", item: "https://www.runtimeguru.com/about" },
+      ],
+    },
+  ],
 };
 
 const values = [
@@ -54,6 +83,10 @@ const teamStats = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 animated-gradient pointer-events-none" />
@@ -64,14 +97,14 @@ export default function AboutPage() {
             Our Story
           </div>
           <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">
-            We're the Team Behind{" "}
+            We&apos;re the Team Behind{" "}
             <span className="gradient-text">150+ Growing Channels</span>
           </h1>
           <p className="text-[#94A3B8] text-xl leading-relaxed mb-8">
-            Runtime Gurus was founded on a simple belief: talented creators and smart entrepreneurs shouldn't have to master video production, SEO, and editing just to build a successful YouTube presence. That's what we're here for.
+            Runtime Gurus was founded on a simple belief: talented creators and smart entrepreneurs shouldn&apos;t have to master video production, SEO, and editing just to build a successful YouTube presence. That&apos;s what we&apos;re here for.
           </p>
           <p className="text-[#94A3B8] text-lg leading-relaxed">
-            What started as a small editing collective grew into a full-service YouTube agency trusted by creators and brands on six continents. We've helped channels go from zero to 200K subscribers, generated over 2.8 billion views, and built dozens of monetised channels from scratch.
+            What started as a small editing collective grew into a full-service YouTube agency trusted by creators and brands on six continents. We&apos;ve helped channels go from zero to 200K subscribers, generated over 2.8 billion views, and built dozens of monetised channels from scratch.
           </p>
         </div>
       </section>
@@ -99,10 +132,10 @@ export default function AboutPage() {
               Making YouTube Growth Accessible to Everyone
             </h2>
             <p className="text-[#94A3B8] leading-relaxed mb-5">
-              YouTube is the world's second-largest search engine and one of the most powerful tools for building authority, generating passive income, and reaching a global audience. But most people never tap its potential â€” not because they lack ideas, but because execution is hard.
+              YouTube is the world&apos;s second-largest search engine and one of the most powerful tools for building authority, generating passive income, and reaching a global audience. But most people never tap its potential — not because they lack ideas, but because execution is hard.
             </p>
             <p className="text-[#94A3B8] leading-relaxed mb-8">
-              Runtime Gurus exists to remove every barrier between your vision and a thriving channel. Whether you're an entrepreneur wanting a faceless channel, a coach trying to grow your audience, or a brand looking to reach millions â€” we make it happen.
+              Runtime Gurus exists to remove every barrier between your vision and a thriving channel. Whether you&apos;re an entrepreneur wanting a faceless channel, a coach trying to grow your audience, or a brand looking to reach millions — we make it happen.
             </p>
             <Link
               href="/contact"
@@ -137,7 +170,7 @@ export default function AboutPage() {
               What We Stand For
             </h2>
             <p className="text-[#94A3B8] text-lg max-w-2xl mx-auto">
-              Our values aren't a corporate poster â€” they're the principles that guide every decision we make for our clients.
+              Our values aren&apos;t a corporate poster — they&apos;re the principles that guide every decision we make for our clients.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

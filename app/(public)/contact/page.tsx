@@ -3,8 +3,35 @@ import { Mail, Clock, Globe2, MessageSquare, Phone } from "lucide-react";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Book a Free Strategy Call",
   description: "Get in touch with Runtime Gurus. Book a free strategy call, request a quote, or ask us anything about YouTube automation and our services.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    url: "/contact",
+    title: "Book a Free Strategy Call | Runtime Gurus",
+    description: "Book a free YouTube strategy call with Runtime Gurus. Get a custom growth plan for your channel — no commitment required.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Runtime Gurus — Book a Free Strategy Call" }],
+  },
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.runtimeguru.com/contact#webpage",
+      url: "https://www.runtimeguru.com/contact",
+      name: "Book a Free Strategy Call | Runtime Gurus",
+      isPartOf: { "@id": "https://www.runtimeguru.com/#website" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.runtimeguru.com" },
+        { "@type": "ListItem", position: 2, name: "Contact", item: "https://www.runtimeguru.com/contact" },
+      ],
+    },
+  ],
 };
 
 const contactInfo = [
@@ -53,6 +80,10 @@ const contactInfo = [
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
+      />
       {/* Hero */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 animated-gradient pointer-events-none" />

@@ -4,9 +4,36 @@ import { TrendingUp, Eye, Users, ArrowRight, Calendar } from "lucide-react";
 import CTA from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Client Results & Portfolio",
+  title: "YouTube Channel Growth Results & Case Studies",
   description:
     "See real YouTube channel growth results from Runtime Gurus clients across finance, health, business, tech, and lifestyle niches worldwide.",
+  alternates: { canonical: "/portfolio" },
+  openGraph: {
+    url: "/portfolio",
+    title: "YouTube Channel Growth Results & Case Studies | Runtime Gurus",
+    description: "Real case studies from Runtime Gurus clients — channels taken from zero to monetization across finance, health, business, tech, and lifestyle niches worldwide.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Runtime Gurus — YouTube Channel Growth Results" }],
+  },
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.runtimeguru.com/portfolio#webpage",
+      url: "https://www.runtimeguru.com/portfolio",
+      name: "YouTube Channel Growth Results & Case Studies | Runtime Gurus",
+      isPartOf: { "@id": "https://www.runtimeguru.com/#website" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.runtimeguru.com" },
+        { "@type": "ListItem", position: 2, name: "Portfolio", item: "https://www.runtimeguru.com/portfolio" },
+      ],
+    },
+  ],
 };
 
 const caseStudies = [
@@ -111,6 +138,10 @@ const caseStudies = [
 export default function PortfolioPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
+      />
       {/* Hero */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 animated-gradient pointer-events-none" />

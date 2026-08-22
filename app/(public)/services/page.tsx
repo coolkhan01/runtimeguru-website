@@ -4,9 +4,103 @@ import { Play, Film, ImageIcon, FileText, LayoutDashboard, CheckCircle2, ArrowRi
 import CTA from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "YouTube Automation Services: Editing, Thumbnails & Channel Management",
   description:
     "Full-stack YouTube services: automation, video editing, thumbnail design, script writing, and complete channel management for international creators and brands.",
+  alternates: { canonical: "/services" },
+  openGraph: {
+    url: "/services",
+    title: "YouTube Automation Services: Editing, Thumbnails & Channel Management | Runtime Gurus",
+    description: "Full-stack YouTube services — automation, editing, thumbnails, scripts, and channel management. One agency, every aspect of your YouTube growth.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Runtime Gurus — YouTube Automation Services" }],
+  },
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.runtimeguru.com/services#webpage",
+      url: "https://www.runtimeguru.com/services",
+      name: "YouTube Automation Services: Editing, Thumbnails & Channel Management | Runtime Gurus",
+      isPartOf: { "@id": "https://www.runtimeguru.com/#website" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.runtimeguru.com" },
+        { "@type": "ListItem", position: 2, name: "Services", item: "https://www.runtimeguru.com/services" },
+      ],
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.runtimeguru.com/services#servicelist",
+      name: "Runtime Gurus YouTube Services",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          item: {
+            "@type": "Service",
+            "@id": "https://www.runtimeguru.com/services#automation",
+            name: "YouTube Automation",
+            url: "https://www.runtimeguru.com/services#automation",
+            description: "YouTube automation is the process of running a profitable YouTube channel without doing any of the work yourself. We handle every element of the content pipeline so your channel grows on autopilot.",
+            provider: { "@id": "https://www.runtimeguru.com/#organization" },
+          },
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          item: {
+            "@type": "Service",
+            "@id": "https://www.runtimeguru.com/services#editing",
+            name: "Video Editing",
+            url: "https://www.runtimeguru.com/services#editing",
+            description: "Professional YouTube video editing across all formats — long-form educational, documentary, talking-head, faceless narration, and short-form vertical content.",
+            provider: { "@id": "https://www.runtimeguru.com/#organization" },
+          },
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          item: {
+            "@type": "Service",
+            "@id": "https://www.runtimeguru.com/services#thumbnails",
+            name: "Thumbnail Design",
+            url: "https://www.runtimeguru.com/services#thumbnails",
+            description: "Scroll-stopping, emotion-driven thumbnail designs that are A/B tested and continuously optimised for click-through rate.",
+            provider: { "@id": "https://www.runtimeguru.com/#organization" },
+          },
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          item: {
+            "@type": "Service",
+            "@id": "https://www.runtimeguru.com/services#scripts",
+            name: "Script Writing",
+            url: "https://www.runtimeguru.com/services#scripts",
+            description: "YouTube scripts blending storytelling, psychology, and SEO to hook viewers in the first 30 seconds and maximise watch time.",
+            provider: { "@id": "https://www.runtimeguru.com/#organization" },
+          },
+        },
+        {
+          "@type": "ListItem",
+          position: 5,
+          item: {
+            "@type": "Service",
+            "@id": "https://www.runtimeguru.com/services#management",
+            name: "Channel Management",
+            url: "https://www.runtimeguru.com/services#management",
+            description: "Full end-to-end management of your YouTube presence — strategy, production, publishing, analytics, and community engagement.",
+            provider: { "@id": "https://www.runtimeguru.com/#organization" },
+          },
+        },
+      ],
+    },
+  ],
 };
 
 const services = [
@@ -120,6 +214,10 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
+      />
       {/* Hero */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 animated-gradient pointer-events-none" />

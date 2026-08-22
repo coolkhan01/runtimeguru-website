@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Terms of Service",
   description: "Runtime Gurus Terms of Service — the rules and conditions governing use of our YouTube automation services.",
   robots: { index: true, follow: true },
+  alternates: { canonical: "/terms" },
+  openGraph: { url: "/terms" },
 };
 
 const sections = [

@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Runtime Gurus Privacy Policy — how we collect, use, and protect your personal information.",
   robots: { index: true, follow: true },
+  alternates: { canonical: "/privacy" },
+  openGraph: { url: "/privacy" },
 };
 
 const sections = [

@@ -37,19 +37,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.runtimeguru.com",
     siteName: "Runtime Gurus",
     title: "Runtime Gurus — YouTube Automation Agency | Done For You Channel Growth",
     description:
       "Professional YouTube automation agency. Scripts, voiceover, editing, thumbnails, and channel management — 90-day monetization guarantee. 200+ channels grown.",
-    images: [{ url: "/logo.png", width: 512, height: 512, alt: "Runtime Gurus Logo" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Runtime Gurus — YouTube Automation Agency" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Runtime Gurus — YouTube Automation Agency",
     description: "Done for you YouTube channel growth. 90-day monetization guarantee. 200+ creators served.",
     creator: "@Shehrozfaiq7",
-    images: ["/logo.png"],
+    images: ["/opengraph-image"],
   },
   icons: {
     icon: [{ url: "/logo.png", type: "image/png" }],
@@ -65,12 +64,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "",
-  },
-  alternates: {
-    canonical: "https://www.runtimeguru.com",
   },
 };
 
@@ -97,7 +90,6 @@ const jsonLd = {
       telephone: "+923368856575",
       sameAs: [
         "https://www.instagram.com/runtimegurus/",
-        "https://linkedin.com/in/youtubeautomation",
         "https://twitter.com/Shehrozfaiq7",
         "https://discord.gg/KFVH2pGsBC",
         "https://ytjobs.co/talent/profile/381182",
@@ -123,6 +115,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${inter.variable} h-full`}>
       <head>
+        <meta name="theme-color" content="#07070E" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
